@@ -7,7 +7,7 @@ import {
   MenuList,
   MenuListItem,
 } from "../animation/Menu";
-import ArrowIcon from "../../icons/ArrowIcon";
+import ArrowIcon from "../icons/ArrowIcon";
 import { useProducts } from "@/context/ProductContextProvider";
 
 export default function DropDownMenu({
