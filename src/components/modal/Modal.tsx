@@ -5,7 +5,7 @@ import {
   MenuList,
   MenuOverlay,
 } from "../animation/Menu";
-import PlusIcon from "../../icons/PlusIcon";
+import PlusIcon from "../icons/PlusIcon";
 import { FaPlus } from "react-icons/fa6";
 import ModalForm from "./ModalForm";
 

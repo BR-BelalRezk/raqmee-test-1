@@ -5,7 +5,7 @@ import {
   MenuList,
   MenuListItem,
 } from "../animation/Menu";
-import HamburgerIcon from "../../icons/HamburgerIcon";
+import HamburgerIcon from "../icons/HamburgerIcon";
 import SearchInput from "./SearchInput";
 import DropDownMenu from "./DropDownMenu";
 
