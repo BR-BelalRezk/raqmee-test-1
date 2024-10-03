@@ -9,6 +9,7 @@ import {
 } from "../animation/Menu";
 import ArrowIcon from "../icons/ArrowIcon";
 import { useProducts } from "@/context/ProductContextProvider";
+import { motion } from "framer-motion";
 
 export default function DropDownMenu({
   text,
@@ -17,7 +18,8 @@ export default function DropDownMenu({
   text: "filter" | "sort by";
   items: typeof sort | typeof filter;
 }) {
-  const { setSortOption, setCategoryFilter } = useProducts();
+  const { setSortOption, setCategoryFilter, categoryFilter, sortOption } =
+    useProducts();
   const handleClick = (action: string) => {
     if (text === "sort by") {
       setSortOption(action);
@@ -51,7 +53,7 @@ export default function DropDownMenu({
             },
           },
         }}
-        className="bg-white/90 backdrop-blur capitalize lg:border lg:border-border lg:rounded-[10px] lg:shadow-lg  w-60 relative lg:absolute lg:top-12 top-2.5 z-[9999]  flex flex-col items-start p-5 justify-center gap-5"
+        className="bg-white/90 backdrop-blur capitalize lg:border lg:border-border lg:rounded-[10px] lg:shadow-lg  w-60 relative lg:absolute lg:top-12 top-2.5 z-[9999]  flex flex-col items-start p-6 justify-center gap-5"
       >
         {items.map((item) => (
           <MenuListItem
@@ -67,9 +69,22 @@ export default function DropDownMenu({
             key={item.label}
           >
             <span
-              className="w-full block cursor-pointer"
+              className="w-full block cursor-pointer relative"
               onClick={() => handleClick(item.action)}
             >
+              {(item.action === categoryFilter ||
+                item.action === sortOption) && (
+                <motion.span
+                  layoutId={text}
+                  transition={{
+                    duration: 0.5,
+                    type: "spring",
+                    stiffness: 200,
+                    damping: 20,
+                  }}
+                  className="size-5 rounded-full bg-main absolute right-0"
+                />
+              )}
               {item.label}
             </span>
           </MenuListItem>
