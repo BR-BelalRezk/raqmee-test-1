@@ -5,7 +5,7 @@ import { IoSearch } from "react-icons/io5";
 import { motion } from "framer-motion";
 
 export default function SearchInput({ className }: { className: string }) {
-  const { setSearchQuery, searchQuery } = useProducts();
+  const { setSearchQuery } = useProducts();
   const [searchValue, setSearchValue] = useState("");
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
