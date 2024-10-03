@@ -40,7 +40,7 @@ export default function ActionMenu() {
             transition: transition,
           },
         }}
-        className="fixed right-0 top-0 bottom-0 lg:relative lg:flex-1 lg:right-auto lg:top-auto lg:h-auto lg:translate-x-0 lg:translate-y-0 lg:bg-transparent w-[75dvw] h-dvh bg-main/90 backdrop-blur z-40 flex items-center justify-center flex-col gap-5 lg:flex-row lg:gap-0 lg:w-full lg:justify-between"
+        className="fixed right-0 top-0 bottom-0 lg:relative lg:flex-1 lg:right-auto lg:top-auto lg:h-auto lg:translate-x-0 lg:translate-y-0 lg:bg-transparent w-[300px] h-dvh bg-main/90 backdrop-blur z-40 flex items-center justify-center flex-col gap-5 lg:flex-row lg:gap-0 lg:w-full lg:justify-between"
       >
         <MenuListItem
           className=""
