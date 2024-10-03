@@ -55,11 +55,17 @@ export default function ModalForm() {
   };
   const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { files } = e.target;
-    if (files) {
-      setForm((prevFromData) => ({
-        ...prevFromData,
-        photo: URL.createObjectURL(files[0]),
-      }));
+
+    if (files && files[0]) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64string = reader.result?.toString() || "";
+        setForm((prevFormData) => ({
+          ...prevFormData,
+          photo: base64string,
+        }));
+      };
+      reader.readAsDataURL(files[0]);
     }
   };
   useEffect(() => {

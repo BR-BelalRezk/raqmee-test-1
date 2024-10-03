@@ -27,7 +27,13 @@ export default function UploadPhoto({ handleChange, photo }: props) {
         >
           {photo ? (
             <figure className="flex items-center justify-center size-32 border-main border rounded-full">
-              <Image src={photo} alt="img" width={50} height={50} />
+              <Image
+                src={photo}
+                alt="img"
+                width={50}
+                height={50}
+                className="size-full object-cover"
+              />
             </figure>
           ) : (
             <span className="flex items-center justify-center border border-main rounded-radius w-36 h-11">

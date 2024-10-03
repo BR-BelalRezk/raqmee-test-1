@@ -22,7 +22,7 @@ export default function Pagination({
   return (
     <div className="flex items-center w-full justify-between">
       <button
-        className="flex items-center justify-center gap-3"
+        className="flex items-center justify-center gap-3 bg-border hover:bg-border/75 transition duration-500 disabled:bg-border/25 px-5 py-2.5 rounded-radius"
         disabled={currentPage === 1}
         onClick={handlePreviousPage}
       >
@@ -43,7 +43,7 @@ export default function Pagination({
         ))}
       </div>
       <button
-        className="flex items-center justify-center gap-3"
+        className="flex items-center justify-center gap-3 bg-border hover:bg-border/75 transition duration-500 disabled:bg-border/25 px-5 py-2.5 rounded-radius"
         disabled={currentPage === totalPages}
         onClick={handleNextPage}
       >
