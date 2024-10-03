@@ -66,7 +66,7 @@ export default function ModalForm() {
     if (!formError) {
       setError(false);
     }
-  }, []);
+  }, [formError]);
   return (
     <form className="mt-10" onSubmit={handleSubmit}>
       <div className="flex flex-col items-start justify-start gap-5 w-full flex-nowrap">
