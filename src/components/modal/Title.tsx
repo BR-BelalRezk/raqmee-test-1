@@ -12,7 +12,7 @@ export default function Title({ title, handleChange }: props) {
         id="title"
         value={title}
         onChange={handleChange}
-        className=" border-border border h-11 focus:outline-border rounded-radius w-full"
+        className=" border-border border h-11 pl-3 focus:outline-border rounded-radius w-full"
       />
     </div>
   );

@@ -12,7 +12,7 @@ export default function Description({ description, handleChange }: props) {
         id="description"
         value={description}
         onChange={handleChange}
-        className="border-border border rounded-radius min-h-36 max-h-36 w-full focus:outline-border"
+        className="border-border border p-3 rounded-radius min-h-36 max-h-36 w-full focus:outline-border"
       />
     </div>
   );
