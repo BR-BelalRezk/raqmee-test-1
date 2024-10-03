@@ -6,7 +6,8 @@ Techniques:
 2. A combination of state, Context API, and localStorage to enhance the user experience (UX).
 3. Advanced animations created with Framer Motion.
 4. All components are custom-built without using any UI libraries.
-5. Using pure JavaScript to implement functionalities such as:
+5. Converting file into base64 to use its string as images.
+6. Using pure JavaScript to implement functionalities such as:
    1. Searching
       2.Filtering
       3.Sorting
