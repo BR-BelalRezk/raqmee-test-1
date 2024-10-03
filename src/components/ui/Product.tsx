@@ -13,7 +13,7 @@ export default function Product({
     <motion.div
       initial={{ opacity: 0, y: 25 }}
       whileInView={{ opacity: 100, y: 0, zIndex: 10 }}
-      transition={{ duration: 0.5, delay: index * 0.1 + 1 }}
+      transition={{ duration: 0.5, delay: index * 0.1 + 0.5 }}
       className=" border-border rounded-radius border relative z-10"
     >
       <figure className="size-[300px]">
